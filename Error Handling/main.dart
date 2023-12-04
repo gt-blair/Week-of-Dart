@@ -6,6 +6,7 @@ void main() {
 
   try {
     pastLimit(int.parse(amount!));
+    print("Success. Withdrawn $amount.");
   } catch (e) {
     if (e is AmountExceptionCeil) {
       print(e.errorMessage());
