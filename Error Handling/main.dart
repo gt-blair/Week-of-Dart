@@ -1,7 +1,5 @@
 import "dart:io";
 
-import "checkValidInput.dart";
-
 void main() {
   print("How much do you want to withdraw?");
   String? amount = stdin.readLineSync();
@@ -9,22 +7,30 @@ void main() {
   try {
     pastLimit(int.parse(amount!));
   } catch (e) {
-    if (e is AmountException) {
+    if (e is AmountExceptionCeil) {
       print(e.errorMessage());
-    } else {
-      print("An unexpected error occurred: $e");
+    } else if (e is AmoutnExceptionNeg) {
+      print(e.errorMessage());
     }
   }
 }
 
-class AmountException implements Exception {
+class AmountExceptionCeil implements Exception {
   String errorMessage() {
     return "You cannot withdraw more than 70000";
   }
 }
 
+class AmoutnExceptionNeg implements Exception {
+  String errorMessage() {
+    return "You cannot withdraw less than 500";
+  }
+}
+
 void pastLimit(int amount) {
   if (amount > 70000) {
-    throw new AmountException();
+    throw new AmountExceptionCeil();
+  } else if (amount < 500) {
+    throw new AmoutnExceptionNeg();
   }
 }
