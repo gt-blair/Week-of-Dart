@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import '../Class1/classes.dart';
 import 'Functions/printOut.dart';
 
 void main() {
