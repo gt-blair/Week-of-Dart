@@ -3,9 +3,6 @@ import 'dart:io';
 import '../Class1/classes.dart';
 
 void main() {
-  List<String> teacherInfo = ["name", "employee_id", "subjects"];
-  List<String> studentInfo = ["name", "classStream", "subjects"];
-
   print("Are you a Teacher or a Student:");
   String? teachOrStud = stdin.readLineSync();
 
