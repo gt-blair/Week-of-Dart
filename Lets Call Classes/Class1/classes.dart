@@ -9,6 +9,10 @@ class Teacher {
     print(
         "My name is $name of employee id: $employee_number and I'll take you through $subjects");
   }
+
+  String returnInfo() {
+    return "Teacher $name, $employee_number, $subjects";
+  }
 }
 
 class Student {
@@ -20,5 +24,9 @@ class Student {
 
   void displayInfo() {
     print("My name is $name of stream $classStream and I'm taking $subjects");
+  }
+
+  String returnInfo() {
+    return "Student $name, $classStream, $subjects";
   }
 }
