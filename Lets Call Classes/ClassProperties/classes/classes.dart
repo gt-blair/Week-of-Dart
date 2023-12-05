@@ -7,7 +7,14 @@ class Car {
   late String country;
   late int km;
 
+  //This is a class constructor
   Car(this.name, this.model, this.horsePower, this.manufacturer, this.country);
+
+  // Say most of our cars(we have plenty) are Subarus
+  Car.common() {
+    name = "Subaru";
+    manufacturer = "Subaru";
+  }
 
   void startCar() {
     print("$name is starting vrooooooom");
