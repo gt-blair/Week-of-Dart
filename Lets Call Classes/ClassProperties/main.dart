@@ -24,4 +24,17 @@ void main() {
   
   //Multiline comments is achieved by /* */
 
+  
+  var car3 = Car.common(); // Fills manufacturer and name fields automatically
+  car3.country = "Germany"; // Subaru could be German or not
+  car3.setMilage = 4000;
+  car3.horsePower = 300; // A lille horse power for our machine
+
+  print("This is our car's details: \n"
+      "Car Name: ${car3.name}\n"
+      "Car Manufacturer: ${car3.manufacturer}\n"
+      "Car Country: ${car3.country}\n"
+      "Horse Power: ${car3.horsePower}\n"
+      "Milage: ${car3.getMilage}");
+
 }
