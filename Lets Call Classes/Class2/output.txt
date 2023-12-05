@@ -1,0 +1,2 @@
+Student Hamza, 7B, [Math, Swahili]
+Teacher Yusuf, BHAPPY2345, [English, Swahili, Science]
