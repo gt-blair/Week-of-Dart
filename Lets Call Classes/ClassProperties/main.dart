@@ -12,7 +12,7 @@ void main() {
 
   // Lets check in with the second constructor
   // The named constructor
-  var car2 = Car.common();
+  //var car2 = Car.common();
 
   // This code generates an error as late modeifier country is not initialized
   // We have to comment out the print block as an error at line 19 will prevent code execution
