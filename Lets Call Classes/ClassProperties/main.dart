@@ -7,4 +7,6 @@ void main() {
 
   print(
       "We own the ${car1.name} model ${car1.model} with ${car1.horsePower} horsepower made by ${car1.manufacturer} in ${car1.country}");
+
+  print("${car1.getMilage} is the cars mileage");
 }
