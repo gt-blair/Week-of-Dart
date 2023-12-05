@@ -11,6 +11,8 @@ class Car {
   Car(this.name, this.model, this.horsePower, this.manufacturer, this.country);
 
   // Say most of our cars(we have plenty) are Subarus
+  // We can use this named class constructor common is used interchangeably with
+  // default
   Car.common() {
     name = "Subaru";
     manufacturer = "Subaru";
