@@ -13,8 +13,15 @@ void main() {
   // Lets check in with the second constructor
   // The named constructor
   var car2 = Car.common();
-  
+
   // This code generates an error as late modeifier country is not initialized
-  print(
+  // We have to comment out the print block as an error at line 19 will prevent code execution
+  // ...To other later blocks
+  
+  /*print(
       "Using the named constructor we have the following properties ${car2.name}, ${car2.manufacturer} and ${car2.country}");
+  */
+  
+  //Multiline comments is achieved by /* */
+
 }
