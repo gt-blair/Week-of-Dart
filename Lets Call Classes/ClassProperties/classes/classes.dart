@@ -7,7 +7,7 @@ class Car {
   late String country;
   late int km;
 
-  Car(this.model, this.horsePower, this.manufacturer, this.country);
+  Car(this.name, this.model, this.horsePower, this.manufacturer, this.country);
 
   void startCar() {
     print("$name is starting vrooooooom");
