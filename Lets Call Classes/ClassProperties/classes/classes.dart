@@ -17,6 +17,8 @@ class Car {
     print("$name is stopping");
   }
 
+  bool drivable() => true;
+
   set setMilage(int value) => km = value;
   get getMilage => km;
 }
