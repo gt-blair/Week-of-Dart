@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'Maps/mapFunction.dart';
 
 void main() {
@@ -10,4 +12,9 @@ void main() {
   // Lets try our square root function
   List<int> squareroot = squarerooting(numberGroup);
   print(squareroot);
+
+  print("To which continent is our next destination? ");
+  String continent = stdin.readLineSync()!;
+  String city = locations[continent.toLowerCase()]!;
+  print("Hooray our next stop is in $city, $continent");
 }
