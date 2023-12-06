@@ -19,7 +19,7 @@ void main() {
     String city = locations[continent.toLowerCase()]!;
     print(
         "Hooray our next stop is in ${formatNames(city)}, ${formatNames(continent)}");
-  } catch (e) {
+  } catch (e) { // Another option is to call the catch exception with stacktrace
     print("Wowza! That's not a continent...");
   }
 }
