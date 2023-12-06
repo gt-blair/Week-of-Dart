@@ -22,12 +22,14 @@ List<int> squarerooting(List<int> numberList) {
 }
 
 // Lets have ourselves a Map
+// We have implemented lower case so as to easily identify it with userInput
+// We are formatting our userInput too too lower alphabets
 Map<String, String> locations = {
-  "North America" : "Montreal",
-  "South America" : "Machu Picchu",
-  "Asia" : "Dubai",
-  "Antarctica" : "Ross Island",
-  "Europe" : "Malta",
-  "Africa" : "Nairobi",
-  "Oceania" : "Melbourne",
+  "north america" : "Montreal",
+  "south america" : "Machu Picchu",
+  "asia" : "Dubai",
+  "antarctica" : "Ross Island",
+  "europe" : "Malta",
+  "africa" : "Nairobi",
+  "aceania" : "Melbourne"
 };
