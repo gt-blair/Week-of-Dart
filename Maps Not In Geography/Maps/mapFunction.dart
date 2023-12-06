@@ -1,3 +1,5 @@
+import 'dart:math';
+
 List<int> squaringNumbers(List<int> numberList) {
   // A .map function iterates through elements of an iterable and perform a function to each
   // For our example want to square
@@ -43,4 +45,24 @@ String formatNames(String name) {
     result = result + name[i].toLowerCase();
   }
   return name[0].toUpperCase() + result;
+}
+
+// Lets add a surprise Destination
+String randomVacation() {
+  Map<int, String> location = {
+    1: "Costa Rica",
+    2: "Grand",
+    2: "Canyon",
+    3: "Maldives",
+    4: "Lisbon",
+    5: "New Orleans",
+    6: "Paris",
+    7: "Tahiti",
+    8: "London",
+    9: "Sydney",
+    10: "Bali",
+    11: "Barcelona"
+  };
+  int randomNumber = Random().nextInt(location.length);
+  return "Hmmm... Lets go to ${location[randomNumber]}";
 }
