@@ -52,16 +52,16 @@ String randomVacation() {
   Map<int, String> location = {
     1: "Costa Rica",
     2: "Grand",
-    2: "Canyon",
-    3: "Maldives",
-    4: "Lisbon",
-    5: "New Orleans",
-    6: "Paris",
-    7: "Tahiti",
-    8: "London",
-    9: "Sydney",
-    10: "Bali",
-    11: "Barcelona"
+    3: "Canyon",
+    4: "Maldives",
+    5: "Lisbon",
+    6: "New Orleans",
+    7: "Paris",
+    8: "Tahiti",
+    9: "London",
+    10: "Sydney",
+    11: "Bali",
+    12: "Barcelona"
   };
   int randomNumber = Random().nextInt(location.length);
   return "Hmmm... Lets go to ${location[randomNumber]}";
