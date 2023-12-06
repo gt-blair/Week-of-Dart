@@ -25,11 +25,22 @@ List<int> squarerooting(List<int> numberList) {
 // We have implemented lower case so as to easily identify it with userInput
 // We are formatting our userInput too too lower alphabets
 Map<String, String> locations = {
-  "north america" : "Montreal",
-  "south america" : "Machu Picchu",
-  "asia" : "Dubai",
-  "antarctica" : "Ross Island",
-  "europe" : "Malta",
-  "africa" : "Nairobi",
-  "aceania" : "Melbourne"
+  "north america": "Montreal",
+  "south america": "Machu Picchu",
+  "asia": "Dubai",
+  "antarctica": "Ross Island",
+  "europe": "Malta",
+  "africa": "Nairobi",
+  "aceania": "Melbourne"
 };
+
+String formatNames(String name) {
+  String result = "";
+  // Sadly we cannot use map in string but you know what we can do...
+  // FOR can work for us u1f61c :
+  // result = name.map()
+  for (int i = 1; i < name.length; i++) {
+    result = result + name[i].toLowerCase();
+  }
+  return name[0].toUpperCase() + result;
+}
