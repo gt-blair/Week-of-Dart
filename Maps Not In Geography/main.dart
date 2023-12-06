@@ -17,9 +17,12 @@ void main() {
   String continent = stdin.readLineSync()!;
   try {
     String city = locations[continent.toLowerCase()]!;
+    String surpriseCity = randomVacation();
     print(
         "Hooray our next stop is in ${formatNames(city)}, ${formatNames(continent)}");
-  } catch (e) { // Another option is to call the catch exception with stacktrace
+    print("Surprise we will go through $surpriseCity... on the House");
+  } catch (e) {
+    // Another option is to call the catch exception with stacktrace
     print("Wowza! That's not a continent...");
   }
 }

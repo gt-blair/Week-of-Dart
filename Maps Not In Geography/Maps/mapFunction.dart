@@ -64,5 +64,5 @@ String randomVacation() {
     12: "Barcelona"
   };
   int randomNumber = Random().nextInt(location.length);
-  return "Hmmm... Lets go to ${location[randomNumber]}";
+  return location[randomNumber]!;
 }
