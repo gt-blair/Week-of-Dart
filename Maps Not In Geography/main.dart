@@ -15,6 +15,11 @@ void main() {
 
   print("To which continent is our next destination? ");
   String continent = stdin.readLineSync()!;
-  String city = locations[continent.toLowerCase()]!;
-  print("Hooray our next stop is in ${formatNames(city)}, ${formatNames(continent)}");
+  try {
+    String city = locations[continent.toLowerCase()]!;
+    print(
+        "Hooray our next stop is in ${formatNames(city)}, ${formatNames(continent)}");
+  } catch (e) {
+    print("Wowza! That's not a continent...");
+  }
 }
