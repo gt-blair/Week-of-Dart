@@ -9,7 +9,7 @@ List<int> squaringNumbers(List<int> numberList) {
 List<int> squarerooting(List<int> numberList) {
   List<int> squareRooted = numberList.map((int element) {
     int number = 0;
-    // A while loop that will increament the value of number 
+    // A while loop that will increament the value of number
     // On the last increment before turning in false in condition
     // We get the square root
     // Same approach can be used in finding root 3
@@ -20,3 +20,14 @@ List<int> squarerooting(List<int> numberList) {
   }).toList();
   return squareRooted;
 }
+
+// Lets have ourselves a Map
+Map<String, String> locations = {
+  "North America" : "Montreal",
+  "South America" : "Machu Picchu",
+  "Asia" : "Dubai",
+  "Antarctica" : "Ross Island",
+  "Europe" : "Malta",
+  "Africa" : "Nairobi",
+  "Oceania" : "Melbourne",
+};
