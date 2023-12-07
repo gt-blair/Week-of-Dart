@@ -71,4 +71,6 @@ bool isSafe(List<List<int>> board, int col, int row) {
     }
   }
 
+  // If no conflicts are found its safe to place the queen
+  return true;
 }
