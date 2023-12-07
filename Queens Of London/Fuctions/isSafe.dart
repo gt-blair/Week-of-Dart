@@ -52,4 +52,23 @@ bool isSafe(List<List<int>> board, int col, int row) {
       return false;
     }
   }
+
+  // Check for queens to the bottom-left diagonal
+  // Column decrease by 1
+  // Row decrease by 1
+  for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+    if (board[col][row] == 1) {
+      return false;
+    }
+  }
+
+  // Check for queens to the bottom-right diagonal
+  // Column increase by 1
+  // Row decrease by 1
+  for (int i = row, j = col; i >= 0 && j <= 7; i--, j++) {
+    if (board[col][row] == 1) {
+      return false;
+    }
+  }
+
 }
