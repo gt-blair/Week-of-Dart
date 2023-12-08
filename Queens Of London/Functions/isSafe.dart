@@ -1,4 +1,4 @@
-/*bool isSafe(List<List<int>> board, int col, int row) {
+bool isSafe(List<List<int>> board, int col, int row) {
   // Check for queens to the left
   // Row is constant
   // Value of column changes
@@ -39,7 +39,7 @@
   // Column decreases by 1
   // Row increases by 1
   for (int i = row, j = col; i <= 7 && j >= 0; i++, j--) {
-    if (board[col][row] == 1) {
+    if (board[j][i] == 1) {
       return false;
     }
   }
@@ -48,7 +48,7 @@
   // Column inrease by 1
   // Row increases by 1
   for (int i = row, j = col; i <= 7 && j <= 7; i++, j++) {
-    if (board[col][row] == 1) {
+    if (board[j][i] == 1) {
       return false;
     }
   }
@@ -57,7 +57,7 @@
   // Column decrease by 1
   // Row decrease by 1
   for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
-    if (board[col][row] == 1) {
+    if (board[j][i] == 1) {
       return false;
     }
   }
@@ -66,38 +66,12 @@
   // Column increase by 1
   // Row decrease by 1
   for (int i = row, j = col; i >= 0 && j <= 7; i--, j++) {
-    if (board[col][row] == 1) {
+    if (board[j][i] == 1) {
       return false;
     }
   }
 
   // If no conflicts are found its safe to place the queen
   return true;
-}*/
-
-
-bool isSafe(List<List<int>> board, int row, int col) {
-  // Check if no queen is present in the current row on the left side
-  for (int i = 0; i < row; i++) {
-    if (board[i][col] == 1) {
-      return false;
-    }
-  }
-
-  // Check upper diagonal on the left side
-  for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
-    if (board[i][j] == 1) {
-      return false;
-    }
-  }
-
-  // Check upper diagonal on the right side
-  for (int i = row, j = col; i >= 0 && j < 8; i--, j++) {
-    if (board[i][j] == 1) {
-      return false;
-    }
-  }
-
-  // If no conflicts are found, it's safe to place the queen
-  return true;
 }
+
