@@ -8,3 +8,6 @@
 ##### In *Code review* :star: we get to have single scripts of the same Implementations
 ##### But different approach, we can do it together...
 ##### For now we will use *ChatGPT* :muscle: maybe some other time *Googles Gemini* :muscle:
+
+##### You can use this link to shade some light on how to prompt ChatGPT
+##### https://www.semrush.com/blog/chatgpt-prompts/
