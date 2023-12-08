@@ -1,0 +1,94 @@
+import 'dart:math';
+import 'dart:io';
+
+List<int> squaringNumbers(List<int> numberList) {
+  // A .map function iterates through elements of an iterable and perform a function to each
+  // For our example want to square
+  List<int> squaredNumbers =
+      numberList.map((int element) => element * element).toList();
+  return squaredNumbers;
+}
+
+List<int> squarerooting(List<int> numberList) {
+  List<int> squareRooted = numberList.map((int element) {
+    int number = 0;
+    // A while loop that will increament the value of number
+    // On the last increment before turning in false in condition
+    // We get the square root
+    // Same approach can be used in finding root 3
+    while (number * number != element) {
+      number = number + 1;
+    }
+    return number;
+  }).toList();
+  return squareRooted;
+}
+
+// Lets have ourselves a Map
+// We have implemented lower case so as to easily identify it with userInput
+// We are formatting our userInput too too lower alphabets
+Map<String, String> locations = {
+  "north america": "Montreal",
+  "south america": "Machu Picchu",
+  "asia": "Dubai",
+  "antarctica": "Ross Island",
+  "europe": "Malta",
+  "africa": "Nairobi",
+  "aceania": "Melbourne"
+};
+
+String formatNames(String name) {
+  String result = "";
+  // Sadly we cannot use map in string but you know what we can do...
+  // FOR can work for us u1f61c :
+  // result = name.map()
+  for (int i = 1; i < name.length; i++) {
+    result = result + name[i].toLowerCase();
+  }
+  return name[0].toUpperCase() + result;
+}
+
+// Lets add a surprise Destination
+String randomVacation() {
+  Map<int, String> location = {
+    1: "Costa Rica",
+    2: "Grand",
+    3: "Canyon",
+    4: "Maldives",
+    5: "Lisbon",
+    6: "New Orleans",
+    7: "Paris",
+    8: "Tahiti",
+    9: "London",
+    10: "Sydney",
+    11: "Bali",
+    12: "Barcelona"
+  };
+  int randomNumber = Random().nextInt(location.length);
+  return location[randomNumber]!;
+}
+
+void main() {
+  List<int> numberGroup = [1, 4, 9, 16, 25];
+
+  // Lets try squaring the numbers
+  List<int> squaring = squaringNumbers(numberGroup);
+  print(squaring);
+
+  // Lets try our square root function
+  List<int> squareroot = squarerooting(numberGroup);
+  print(squareroot);
+
+  print("To which continent is our next destination? ");
+  String continent = stdin.readLineSync()!;
+  try {
+    String city = locations[continent.toLowerCase()]!;
+    String surpriseCity = randomVacation();
+    print(
+        "Hooray our next stop is in ${formatNames(city)}, ${formatNames(continent)}");
+    print("Surprise we will go through $surpriseCity... on the House");
+  } catch (e) {
+    // Another option is to call the catch exception with stacktrace
+    print("Wowza! That's not a continent...");
+  }
+}
